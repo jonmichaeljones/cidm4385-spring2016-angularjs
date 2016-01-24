@@ -1,4 +1,4 @@
-#Angular JS Basics
+#AngularJS Basics
 
 ##Main Ingredients
 * Module
