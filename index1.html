@@ -16,7 +16,8 @@
                     var cc = this;
                     
                     cc.cost = 1000.1;
-                    cc.add_tax = true;0
+                    cc.add_tax = true;
+                    cc.total_bill = true;
                     
                     function update(){
                         cc.tax = cc.add_tax ? cc.cost * 0.15 : 0.0;    
@@ -27,6 +28,11 @@
                     $scope.$watch('cc.cost', update);
                     $scope.$watch('cc.add_tax', update);
                     $scope.$watch('cc.cost + cc.tax', update);
+                    
+                    cc.final_bill = 0.0;
+                    cc.add = function add(){
+                        cc.final_bill += cc.total;   
+                    }
                 }
             );
         </script>
@@ -48,8 +54,11 @@
             </p>
             <p ng-show="cc.total_bill">
                 This is your total: {{cc.total|currency}}
-                <button ng-click="add()">Add</button>
-            </p>            
+                <button ng-click="cc.add()">Add</button>
+            </p>
+            <p ng-show="cc.total_bill">
+                Your running total is {{cc.final_bill|currency}}
+            </p>
         </div>
     </body>
 </html>

@@ -29,6 +29,8 @@
   * creating input elements
     * checkbox - attaching a model to it
     * button - attaching an event handler to it
+    * select box
+    * radio button
 
 
 
