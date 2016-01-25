@@ -26,6 +26,9 @@
   * creating a controller
   * using $scope
   * using $scope.$watch
+  * creating input elements
+    * checkbox - attaching a model to it
+    * button - attaching an event handler to it
 
 
 
