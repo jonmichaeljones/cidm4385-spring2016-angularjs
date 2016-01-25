@@ -31,6 +31,11 @@
     * button - attaching an event handler to it
     * select box
     * radio button
+  * Multiple Controllers
+* **Template Directives**
+  * ng-repeat
+  * ng-show
+  * ng-hide
 
 
 

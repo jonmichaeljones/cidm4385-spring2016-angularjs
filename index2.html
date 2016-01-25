@@ -23,8 +23,12 @@
     <body ng-controller="ContactsController as cc">
         <div ng-repeat="person in cc.people">
             {{person.name}}
+            (
+            <a href="#" ng-click="person.show_phones=true" ng-hide="person.show_phones">Show</a>
+            <a href="#" ng-click="person.show_phones=false" ng-show="person.show_phones">Hide</a>
+            )
             
-            <div style="margin-left:50px;">
+            <div style="margin-left:50px;" ng-show="person.show_phones">
                 <div ng-repeat="phone in person.phones">
                     {{phone}}
                 </div>
