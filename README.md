@@ -19,6 +19,7 @@
 #Objectives
 
 * **Angular Models Update Data Live** - AngularJS uses models and html templates for views and connects models data in the HTML view so that it instantly updates
-  *  Using Google Libraries
+  * Using Google Libraries
   * index1.html
-* 
+
+  

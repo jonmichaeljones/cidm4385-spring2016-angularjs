@@ -6,7 +6,9 @@
     <body>
         Cost: <input type="text" ng-model="cost" placeholder="cost" />
         <p>
-            This is your cost: {{cost}}
+            <!-- the angular directive both associates with the cost model and
+                 uses a built-in formatting capability -->
+            This is your cost: {{cost|currency}}
         </p>
     </body>
 </html>
