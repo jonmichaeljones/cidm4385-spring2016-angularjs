@@ -21,12 +21,13 @@
                     
                     function update(){
                         cc.tax = cc.add_tax ? cc.cost * 0.15 : 0.0;    
-                        cc.total = parseFloat(cc.cost) + cc.tax; 
+                        cc.total = parseFloat(cc.cost) + cc.tax + cc.shipping.amount; 
                     }
                     
                     //used to detect when cost changes
                     $scope.$watch('cc.cost', update);
                     $scope.$watch('cc.add_tax', update);
+                    $scope.$watch('cc.shipping', update);
                     $scope.$watch('cc.cost + cc.tax', update);
                     
                     //final bill
