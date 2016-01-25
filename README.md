@@ -21,5 +21,4 @@
 * **Angular Models Update Data Live** - AngularJS uses models and html templates for views and connects models data in the HTML view so that it instantly updates
   * Using Google Libraries
   * index1.html
-
-  
+* **Controllers** - Controllers are the central brain/nervous system used to marshal information from views to models (and back)
