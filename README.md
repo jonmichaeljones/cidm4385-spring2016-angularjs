@@ -32,12 +32,17 @@
     * select box
     * radio button
   * Multiple Controllers
-* **Template Directives**
+* **Templates and Directives**
   * ng-repeat
   * ng-show
   * ng-hide
   * ng-class-odd
   * ng-class-even
+  * Angular-Animate library
+* **Shared Data**
+  * event-handling
+    * $emit
+    * $on
 
 
 
