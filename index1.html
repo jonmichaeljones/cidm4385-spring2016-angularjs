@@ -29,10 +29,22 @@
                     $scope.$watch('cc.add_tax', update);
                     $scope.$watch('cc.cost + cc.tax', update);
                     
+                    //final bill
                     cc.final_bill = 0.0;
                     cc.add = function add(){
                         cc.final_bill += cc.total;   
                     }
+                    
+                    //shipping options
+                    cc.shipping_options = [
+                        {amount:10.0, name:"Flat Rate"},
+                        {amount:20.0, name:"Express"},
+                        {amount:30.0, name:"Super Express"}
+                    ];
+                    
+                    cc.shipping = cc.shipping_options[0];
+                    
+                    
                 }
             );
         </script>
