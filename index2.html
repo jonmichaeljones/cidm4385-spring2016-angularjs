@@ -16,19 +16,48 @@
                         {name:'Jane', phones:['806-555-3232', '806-555-7878']},
                         {name:'Jill', phones:['804-867-5309', '806-555-2112']}
                     ];
+                    
+                    cc.add = function add(){
+                        cc.people.push(
+                            {name:'xxx', phones:['xxx-xxx-xxxx', 'xxx-xxx-xxxx']}
+                        );
+                    }                    
+                }
+            );
+            
+            myModule.controller('PersonController', 
+                function ($scope) {
+                    var pc = this;
+                    
+                    pc.show_phones = false;
+
+                    pc.show = function show(){
+                        pc.show_phones=true;
+                    }
+                    
+                    pc.hide = function hide(){
+                        pc.show_phones=false;
+                    }                    
+                    
                 }
             );            
+            
         </script>
+        <style>
+            .gray { background: #eee; }
+        </style>
     </head>
     <body ng-controller="ContactsController as cc">
-        <div ng-repeat="person in cc.people">
+        <button ng-click="cc.add()">Add</button>
+        <div ng-repeat="person in cc.people" ng-controller="PersonController as pc"
+             ng-class-odd="'gray'">
             {{person.name}}
             (
-            <a href="#" ng-click="person.show_phones=true" ng-hide="person.show_phones">Show</a>
-            <a href="#" ng-click="person.show_phones=false" ng-show="person.show_phones">Hide</a>
+            <a href="#" ng-click="pc.show()" ng-hide="pc.show_phones">Show</a>
+            <a href="#" ng-click="pc.hide()" ng-show="pc.show_phones">Hide</a>
             )
             
-            <div style="margin-left:50px;" ng-show="person.show_phones">
+            <div style="margin-left:50px;" ng-show="pc.show_phones">
                 <div ng-repeat="phone in person.phones">
                     {{phone}}
                 </div>

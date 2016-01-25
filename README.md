@@ -36,6 +36,8 @@
   * ng-repeat
   * ng-show
   * ng-hide
+  * ng-class-odd
+  * ng-class-even
 
 
 
